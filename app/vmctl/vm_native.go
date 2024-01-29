@@ -189,10 +189,13 @@ func (p *vmNativeProcessor) runBackfilling(ctx context.Context, tenantID string,
 
 	var foundSeriesMsg string
 
-	metrics := []string{p.filter.Match}
+	var metrics = map[string]struct{}{
+		p.filter.Match: {},
+	}
+
 	if !p.disablePerMetricRequests {
 		log.Printf("Exploring metrics...")
-		metrics, err = p.src.Explore(ctx, p.filter, tenantID)
+		metrics, err = p.src.Explore(ctx, p.filter, tenantID, p.cc)
 		if err != nil {
 			return fmt.Errorf("cannot get metrics from source %s: %w", p.src.Addr, err)
 		}
@@ -205,7 +208,6 @@ func (p *vmNativeProcessor) runBackfilling(ctx context.Context, tenantID string,
 			log.Println(errMsg)
 			return nil
 		}
-		metrics = removeDuplicateStr(metrics)
 		foundSeriesMsg = fmt.Sprintf("Found %d metrics to import", len(metrics))
 	}
 
@@ -264,7 +266,7 @@ func (p *vmNativeProcessor) runBackfilling(ctx context.Context, tenantID string,
 	}
 
 	// any error breaks the import
-	for _, s := range metrics {
+	for s := range metrics {
 
 		match, err := buildMatchWithFilter(p.filter.Match, s)
 		if err != nil {
@@ -370,16 +372,4 @@ func buildMatchWithFilter(filter string, metricName string) (string, error) {
 
 	match := "{" + strings.Join(filters, " or ") + "}"
 	return match, nil
-}
-
-func removeDuplicateStr(arrIn []string) []string {
-	allKeys := make(map[string]bool)
-	var arrOut []string
-	for _, item := range arrIn {
-		if _, value := allKeys[item]; !value {
-			allKeys[item] = true
-			arrOut = append(arrOut, item)
-		}
-	}
-	return arrOut
 }
