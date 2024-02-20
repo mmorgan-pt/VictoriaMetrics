@@ -12,29 +12,33 @@
 <img src="docs/logo.webp" width="300" alt="VictoriaMetrics logo">
 
 VictoriaMetrics is a fast, cost-effective and scalable monitoring solution and time series database.
+See [case studies for VictoriaMetrics](https://docs.victoriametrics.com/CaseStudies.html).
 
 VictoriaMetrics is available in [binary releases](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/latest),
 [Docker images](https://hub.docker.com/r/victoriametrics/victoria-metrics/), [Snap packages](https://snapcraft.io/victoriametrics)
 and [source code](https://github.com/VictoriaMetrics/VictoriaMetrics). 
 
-The cluster version of VictoriaMetrics is available [here](https://docs.victoriametrics.com/Cluster-VictoriaMetrics.html).
+Documentation for the cluster version of VictoriaMetrics is available [here](https://docs.victoriametrics.com/Cluster-VictoriaMetrics.html).
 
 Learn more about [key concepts](https://docs.victoriametrics.com/keyConcepts.html) of VictoriaMetrics and follow the 
 [quick start guide](https://docs.victoriametrics.com/Quick-Start.html) for a better experience.
 
-There is also a user-friendly database for logs - [VictoriaLogs](https://docs.victoriametrics.com/VictoriaLogs/).
-
 If you have questions about VictoriaMetrics, then feel free asking them in the [VictoriaMetrics community Slack chat](https://slack.victoriametrics.com/).
 
-[Contact us](mailto:info@victoriametrics.com) if you need enterprise support for VictoriaMetrics. 
+[Contact us](mailto:info@victoriametrics.com) if you need enterprise support for VictoriaMetrics.
 See [features available in enterprise package](https://docs.victoriametrics.com/enterprise.html).
-Enterprise binaries can be downloaded and evaluated for free 
+Enterprise binaries can be downloaded and evaluated for free
 from [the releases page](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/latest).
 You can also [request a free trial license](https://victoriametrics.com/products/enterprise/trial/).
 
-VictoriaMetrics is developed at a fast pace, so it is recommended to check the [CHANGELOG](https://docs.victoriametrics.com/CHANGELOG.html) periodically, and to perform [regular upgrades](#how-to-upgrade-victoriametrics).
+VictoriaMetrics is developed at a fast pace, so it is recommended to check the [CHANGELOG](https://docs.victoriametrics.com/CHANGELOG.html) periodically,
+and to perform [regular upgrades](#how-to-upgrade-victoriametrics).
 
-VictoriaMetrics has achieved security certifications for Database Software Development and Software-Based Monitoring Services. We apply strict security measures in everything we do. See our [Security page](https://victoriametrics.com/security/) for more details.
+[VictoriaMetrics enterprise](https://docs.victoriametrics.com/enterprise/) provides long-term support lines of releases (LTS releases) -
+see [these docs](https://docs.victoriametrics.com/LTS-releases.md).
+
+VictoriaMetrics has achieved security certifications for Database Software Development and Software-Based Monitoring Services.
+We apply strict security measures in everything we do. See [Security page](https://victoriametrics.com/security/) for more details.
 
 ## Prominent features
 
@@ -99,40 +103,24 @@ VictoriaMetrics has the following prominent features:
 * It can store data on [NFS-based storages](https://en.wikipedia.org/wiki/Network_File_System) such as [Amazon EFS](https://aws.amazon.com/efs/)
   and [Google Filestore](https://cloud.google.com/filestore).
 
-See also [various Articles about VictoriaMetrics](https://docs.victoriametrics.com/Articles.html).
+See [case studies for VictoriaMetrics](https://docs.victoriametrics.com/CaseStudies.html) and [various Articles about VictoriaMetrics](https://docs.victoriametrics.com/Articles.html).
 
-## Case studies and talks
+## Components
 
-Case studies:
+VictoriaMetrics ecosystem contains the following components additionally to [single-node VictoriaMetrics](https://docs.victoriametrics.com/):
 
-* [AbiosGaming](https://docs.victoriametrics.com/CaseStudies.html#abiosgaming)
-* [adidas](https://docs.victoriametrics.com/CaseStudies.html#adidas)
-* [Adsterra](https://docs.victoriametrics.com/CaseStudies.html#adsterra)
-* [ARNES](https://docs.victoriametrics.com/CaseStudies.html#arnes)
-* [Brandwatch](https://docs.victoriametrics.com/CaseStudies.html#brandwatch)
-* [CERN](https://docs.victoriametrics.com/CaseStudies.html#cern)
-* [COLOPL](https://docs.victoriametrics.com/CaseStudies.html#colopl)
-* [Criteo](https://docs.victoriametrics.com/CaseStudies.html#criteo)
-* [Dig Security](https://docs.victoriametrics.com/CaseStudies.html#dig-security)
-* [Fly.io](https://docs.victoriametrics.com/CaseStudies.html#flyio)
-* [German Research Center for Artificial Intelligence](https://docs.victoriametrics.com/CaseStudies.html#german-research-center-for-artificial-intelligence)
-* [Grammarly](https://docs.victoriametrics.com/CaseStudies.html#grammarly)
-* [Groove X](https://docs.victoriametrics.com/CaseStudies.html#groove-x)
-* [Idealo.de](https://docs.victoriametrics.com/CaseStudies.html#idealode)
-* [MHI Vestas Offshore Wind](https://docs.victoriametrics.com/CaseStudies.html#mhi-vestas-offshore-wind)
-* [Naver](https://docs.victoriametrics.com/CaseStudies.html#naver)
-* [Razorpay](https://docs.victoriametrics.com/CaseStudies.html#razorpay)
-* [Percona](https://docs.victoriametrics.com/CaseStudies.html#percona)
-* [Roblox](https://docs.victoriametrics.com/CaseStudies.html#roblox)
-* [Sensedia](https://docs.victoriametrics.com/CaseStudies.html#sensedia)
-* [Smarkets](https://docs.victoriametrics.com/CaseStudies.html#smarkets)
-* [Synthesio](https://docs.victoriametrics.com/CaseStudies.html#synthesio)
-* [Wedos.com](https://docs.victoriametrics.com/CaseStudies.html#wedoscom)
-* [Wix.com](https://docs.victoriametrics.com/CaseStudies.html#wixcom)
-* [Zerodha](https://docs.victoriametrics.com/CaseStudies.html#zerodha)
-* [zhihu](https://docs.victoriametrics.com/CaseStudies.html#zhihu)
-
-See also [articles and slides about VictoriaMetrics from our users](https://docs.victoriametrics.com/Articles.html#third-party-articles-and-slides-about-victoriametrics)
+- [vmagent](https://docs.victoriametrics.com/vmagent/) - lightweight agent for receiving metrics via [pull-based](https://docs.victoriametrics.com/vmagent/#how-to-collect-metrics-in-prometheus-format)
+  and [push-based](https://docs.victoriametrics.com/vmagent/#how-to-push-data-to-vmagent) protocols, transforming and sending them to the configured Prometheus-compatible
+  remote storage systems such as VictoriaMetrics.
+- [vmalert](https://docs.victoriametrics.com/vmalert/) - a service for processing Prometheus-compatible alerting and recording rules.
+- [vmalert-tool](https://docs.victoriametrics.com/vmalert-tool/) -  a tool for validating alerting and recording rules.
+- [vmauth](https://docs.victoriametrics.com/vmauth/) - authorization proxy and load balancer optimized for VictoriaMetrics products.
+- [vmgateway](https://docs.victoriametrics.com/vmgateway/) - auhtorization proxy with per-[tenant](https://docs.victoriametrics.com/cluster-victoriametrics/#multitenancy) rate limiting cababilities.
+- [vmctl](https://docs.victoriametrics.com/vmctl/) - a tool for migrating and copying data between different storage systems for metrics.
+- [vmbackup](https://docs.victoriametrics.com/vmbackup/), [vmrestore](https://docs.victoriametrics.com/vmrestore/) and [vmbackupmanager](https://docs.victoriametrics.com/vmbackupmanager/) -
+  tools for creating backups and restoring from backups for VictoriaMetrics data.
+- `vminsert`, `vmselect` and `vmstorage` - components of [VictoriaMetrics cluster](https://docs.victoriametrics.com/Cluster-VictoriaMetrics.html).
+- [VictoriaLogs](https://docs.victoriametrics.com/VictoriaLogs/) - user-friendly cost-efficient database for logs.
 
 ## Operation
 
@@ -497,11 +485,18 @@ Prometheus doesn't drop data during VictoriaMetrics restart. See [this article](
 
 ## How to scrape Prometheus exporters such as [node-exporter](https://github.com/prometheus/node_exporter)
 
-VictoriaMetrics can be used as drop-in replacement for Prometheus for scraping targets configured in `prometheus.yml` config file according to [the specification](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#configuration-file). Just set `-promscrape.config` command-line flag to the path to `prometheus.yml` config - and VictoriaMetrics should start scraping the configured targets. If the provided configuration file contains [unsupported options](https://docs.victoriametrics.com/vmagent.html#unsupported-prometheus-config-sections), then either delete them from the file or just pass `-promscrape.config.strictParse=false` command-line flag to VictoriaMetrics, so it will ignore unsupported options.
+VictoriaMetrics can be used as drop-in replacement for Prometheus for scraping targets configured in `prometheus.yml` config file
+according to [the specification](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#configuration-file).
+Just set `-promscrape.config` command-line flag to the path to `prometheus.yml` config - and VictoriaMetrics should start scraping the configured targets.
+If the provided configuration file contains [unsupported options](https://docs.victoriametrics.com/vmagent.html#unsupported-prometheus-config-sections),
+then either delete them from the file or just pass `-promscrape.config.strictParse=false` command-line flag to VictoriaMetrics, so it will ignore unsupported options.
 
 The file pointed by `-promscrape.config` may contain `%{ENV_VAR}` placeholders, which are substituted by the corresponding `ENV_VAR` environment variable values.
 
-See [the list of supported service discovery types for Prometheus scrape targets](https://docs.victoriametrics.com/sd_configs.html).
+See also:
+
+- [scrape config examples](https://docs.victoriametrics.com/scrape_config_examples/)
+- [the list of supported service discovery types for Prometheus scrape targets](https://docs.victoriametrics.com/sd_configs.html)
 
 VictoriaMetrics also supports [importing data in Prometheus exposition format](#how-to-import-data-in-prometheus-exposition-format).
 
@@ -1060,7 +1055,7 @@ to your needs or when testing bugfixes.
 
 ### Development build
 
-1. [Install Go](https://golang.org/doc/install). The minimum supported version is Go 1.20.
+1. [Install Go](https://golang.org/doc/install). The minimum supported version is Go 1.22.
 1. Run `make victoria-metrics` from the root folder of [the repository](https://github.com/VictoriaMetrics/VictoriaMetrics).
    It builds `victoria-metrics` binary and puts it into the `bin` folder.
 
@@ -1076,7 +1071,7 @@ ARM build may run on Raspberry Pi or on [energy-efficient ARM servers](https://b
 
 ### Development ARM build
 
-1. [Install Go](https://golang.org/doc/install). The minimum supported version is Go 1.20.
+1. [Install Go](https://golang.org/doc/install). The minimum supported version is Go 1.22.
 1. Run `make victoria-metrics-linux-arm` or `make victoria-metrics-linux-arm64` from the root folder of [the repository](https://github.com/VictoriaMetrics/VictoriaMetrics).
    It builds `victoria-metrics-linux-arm` or `victoria-metrics-linux-arm64` binary respectively and puts it into the `bin` folder.
 
@@ -1090,7 +1085,7 @@ ARM build may run on Raspberry Pi or on [energy-efficient ARM servers](https://b
 
 `Pure Go` mode builds only Go code without [cgo](https://golang.org/cmd/cgo/) dependencies.
 
-1. [Install Go](https://golang.org/doc/install). The minimum supported version is Go 1.20.
+1. [Install Go](https://golang.org/doc/install). The minimum supported version is Go 1.22.
 1. Run `make victoria-metrics-pure` from the root folder of [the repository](https://github.com/VictoriaMetrics/VictoriaMetrics).
    It builds `victoria-metrics-pure` binary and puts it into the `bin` folder.
 
